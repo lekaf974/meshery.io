@@ -1,5 +1,5 @@
 ---
-title: mesheryctl model init and build explained
+title: Introduction to mesheryctl model init and mesheryctl model build
 subheading: How to start a new model from scratch using mesheryctl
 date: 2025-10-29
 author: Matthieu Evrin
