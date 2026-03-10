@@ -4,7 +4,7 @@ subheading: "The relationship commands graduate from experimental mode — here 
 date: 2026-03-10
 author: Matthieu Evrin
 categories:
-  - mesheryctlg
+  - mesheryctl
 redirect_from: /blog/mesheryctl-relationship-commands-promoted
 published: true
 ---
