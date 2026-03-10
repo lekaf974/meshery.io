@@ -1,6 +1,6 @@
 ---
-title: "mesheryctl relationship commands explained"
-subheading: "How to list, search, view, and generate relationship documentation using mesheryctl"
+title: "mesheryctl relationship commands promoted from experimental"
+subheading: "The relationship commands graduate from experimental mode — here is everything you need to know"
 date: 2026-03-10
 author: Matthieu Evrin
 categories:
@@ -10,7 +10,22 @@ redirect_from: /blog/mesheryctl-relationship-commands-explained
 published: true
 ---
 
-If you are managing cloud-native infrastructure with Meshery, understanding how your components interact is critical. This post walks you through the `mesheryctl relationship` commands so you can explore, search, and document relationships directly from your terminal.
+If you are managing cloud-native infrastructure with Meshery, understanding how your components interact is critical. This post walks you through the `mesheryctl relationship` commands — and celebrates an important milestone: **these commands have officially graduated from experimental mode**.
+
+### From `mesheryctl exp relationship` to `mesheryctl relationship`
+
+For several months, the relationship commands lived under the experimental namespace and were invoked as `mesheryctl exp relationship ...`. The `exp` prefix was a signal to users that the API, output format, and behavior might still change.
+
+After a period of stabilization, community feedback, and real-world usage, **the relationship commands have been promoted to stable** and moved to the top-level namespace:
+
+| Before (experimental) | After (stable) |
+|-----------------------|----------------|
+| `mesheryctl exp relationship list` | `mesheryctl relationship list` |
+| `mesheryctl exp relationship search` | `mesheryctl relationship search` |
+| `mesheryctl exp relationship view` | `mesheryctl relationship view` |
+| `mesheryctl exp relationship generate` | `mesheryctl relationship generate` |
+
+> **What this means for you:** If you have scripts or automation that call `mesheryctl exp relationship`, update them to use `mesheryctl relationship` instead. The `exp` prefix is no longer needed and future versions may remove backward compatibility for the old path.
 
 > **What is a Meshery Relationship?**  
 > In the Meshery ecosystem, a **relationship** defines how two or more [components](https://docs.meshery.io/concepts/logical/components) are interconnected. Relationships capture the dependencies, policies, and interactions between components within a [model](https://docs.meshery.io/concepts/logical/models). They are organized by **kind** (e.g., `hierarchical`, `edge`), **type**, and **subtype** (e.g., `parent`, `binding`) and are evaluated by Meshery's policy engine to enforce design constraints and visualize architectural intent.  
